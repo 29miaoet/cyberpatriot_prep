@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        section {
+            background: white;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #2196F3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1976D2;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Test Page</h1>
+    <p>This is a simple page for testing HTML, CSS, and JavaScript.</p>
+</header>
+
+<section>
+    <h2>Interactive Test</h2>
+    <p>Click the button below to test JavaScript functionality.</p>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+</section>
+
+<section>
+    <h2>Form Test</h2>
+    <form onsubmit="return submitForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 HTML Test Page</p>
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").textContent = "Button clicked successfully!";
+    }
+
+    function submitForm() {
+        const name = document.getElementById("name").value;
+        alert("Hello, " + name + "!");
+        return false; // Prevent actual form submission
+    }
+</script>
+
+</body>
+</html>
