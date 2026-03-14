@@ -29,8 +29,8 @@ EOF
 sudo chmod u+x ~/Desktop/faillock.desktop
 
 if ! command -v locate >/dev/null 2>&1; then
-sudo apt install locate &>/dev/null || echo "An error occured."
-sudo updatedb &>/dev/null || echo "An error occured."
+    sudo apt update &>/dev/null
+    sudo apt install -y plocate &>/dev/null && sudo updatedb &>/dev/null || echo "An error occurred."
 fi
 
 echo "Installation successfull!"
