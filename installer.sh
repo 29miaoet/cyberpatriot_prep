@@ -27,6 +27,12 @@ Icon=/opt/cpadu/cyberpatriot_icon.png
 Terminal=true
 EOF
 sudo chmod u+x ~/Desktop/faillock.desktop
+
+if ! command -v locate >/dev/null 2>&1; then
+sudo apt install locate &>/dev/null || echo "An error occured."
+sudo updatedb &>/dev/null || echo "An error occured."
+fi
+
 echo "Installation successfull!"
 printf "Auto-removal in 3..."
 sleep 1
